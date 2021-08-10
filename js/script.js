@@ -10,7 +10,7 @@ var numeros = document.querySelector('.d-1-3');
 
 var numero = '';
 var votobranco = true;
-var etapaAtual = 0;
+let etapaAtual = 0;
 
 function Comecaretapa(){
     let etapa = etapas[etapaAtual];
@@ -93,10 +93,27 @@ function corrige(){
 }
 function confirma(){
     let etapa = etapas[etapaAtual];
+    let votoConfirmado = false;
+
     if(votobranco === true){
+        votoConfirmado = true;
         console.log("Confirmando voto branco");
-    }else if(numero.length === etapas.numeros){
+    }else if(numero.length === etapa.numeros){
+        votoConfirmado = true;
         console.log("Confirmando como"+numero);
+    }
+    if(votoConfirmado){
+        etapaAtual++;
+        if(etapas[etapaAtual] !== undefined){
+            Comecaretapa();
+        }else{
+            vaga.style.display = 'none';
+            cargo.innerHTML = etapa.titulo;
+            aviso.style.display= 'none';
+            lateral.innerHTML='';
+            numeros.innerHTML = '';
+            descricao.innerHTML = '<div class="aviso--grande pisca">Fim de votação!!</div>';
+        }
     }
 }
 
