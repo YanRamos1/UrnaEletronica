@@ -9,11 +9,13 @@ var numeros = document.querySelector('.d-1-3');
 
 
 var numero = '';
+var votobranco = true;
 var etapaAtual = 0;
 
 function Comecaretapa(){
     let etapa = etapas[etapaAtual];
-
+    votobranco = false;
+    numero = '';
     let numeroHTML = '';
 
     for(let i=0; i<etapa.numeros;i++){
@@ -56,7 +58,7 @@ function atualizatela(){
     }else{
         vaga.style.display = 'block';
         aviso.style.display = 'block';
-        descricao.innerHTML = <div class="aviso--grande">VOTO NULO</div>;
+        descricao.innerHTML = '<div class="aviso--grande pisca">VOTO NULO</div>';
     }
 
     console.log("Candidato", candidato);
@@ -67,7 +69,6 @@ function clicou (n){
     if(num !== null){
         num.innerHTML = n;
         numero = `${numero}${n}`;
-
         num.classList.remove('pisca');
         if(num.nextElementSibling !== null){
         num.nextElementSibling.classList.add('pisca');
@@ -77,13 +78,26 @@ function clicou (n){
     }
 }
 function branco(){
-    alert("Clicou no branco!");
+    if(numero === ''){
+        votobranco = true;
+        vaga.style.display = 'block';
+        aviso.style.display = 'block';
+        numeros.innerHTML = '';
+        descricao.innerHTML = '<div class="aviso--grande pisca">VOTO EM BRANCO</div>';
+    }else{
+        alert("Apague os numeros.");
+    }
 }
 function corrige(){
-    alert("Clicou no corrige!");
+    Comecaretapa();
 }
 function confirma(){
-    alert("Clicou no confirma!");
+    let etapa = etapas[etapaAtual];
+    if(votobranco === true){
+        console.log("Confirmando voto branco");
+    }else if(numero.length === etapas.numeros){
+        console.log("Confirmando como"+numero);
+    }
 }
 
 Comecaretapa();

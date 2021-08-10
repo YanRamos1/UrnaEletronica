@@ -131,6 +131,11 @@ body{
     margin: 2px;
 
 }
+
+.aviso--grande{
+    font-size:40px;
+    font-weight: bold;
+}
 .pisca{
     animation-name:pisca;
     animation-duration:1s;

@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a86d9de2-b0ac-4bbb-bb27-268fc6e36ea1" name="Changes" comment="Design e html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +87,7 @@
       <workItem from="1628540421229" duration="429000" />
       <workItem from="1628542152388" duration="191000" />
       <workItem from="1628542869792" duration="1574000" />
-      <workItem from="1628596414342" duration="11001000" />
+      <workItem from="1628596414342" duration="12698000" />
     </task>
     <task id="LOCAL-00001" summary="Design e html">
       <created>1628510935349</created>
@@ -125,6 +127,21 @@
                 </map>
               </option>
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="main" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
